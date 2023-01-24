@@ -1,7 +1,7 @@
 import Input from "../Input/Input.component";
-import axios from "axios";
+import Axios from "axios";
 import { useState } from "react";
-import "../../App.css"
+import "../../App.css";
 
 type objeto = {
   name: string;
@@ -33,8 +33,7 @@ export default function Form() {
 
   const handlePost = () => {
     const url = "https://betplay.onrender.com/api";
-    axios
-      .post(url, object)
+    Axios.post(url, object)
       .then((response) => {
         console.log(response);
       })
