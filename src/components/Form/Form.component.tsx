@@ -1,6 +1,7 @@
 import Input from "../Input/Input.component";
 import axios from "axios";
 import { useState } from "react";
+import "../../App.css"
 
 type objeto = {
   name: string;
@@ -43,8 +44,12 @@ export default function Form() {
   };
   console.log(object);
   return (
-    <>
-      <div>Formulário</div>
+    <form className="w-full flex flex-col justify-evenly items-center">
+      <div className="backG w-96 h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
+        <h1 className="text-6xl text-center text-white font-black uppercase">
+          Bet Aposta
+        </h1>
+      </div>
       <Input
         onChange={nameInputChange}
         type="text"
@@ -64,12 +69,12 @@ export default function Form() {
         labelValue="Chave Pix"
       />
       <button
-        className="bg-blue-900 text-white w-32 h-10 rounded-md p-2 m-1 hover:bg-blue-700"
+        className="bg-green-900 text-white w-32 h-10 rounded-md p-2 m-1 hover:bg-green-700 ease-in-out duration-300"
         onClick={handlePost}
         type="submit"
       >
         Post
       </button>
-    </>
+    </form>
   );
 }

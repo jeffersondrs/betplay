@@ -5,8 +5,8 @@ import Request from "./components/ApiRequest/Api.component";
 function App() {
   return (
     <div className="App">
+      <Form />
       <div>
-        <Form />
         <Request />
       </div>
     </div>
