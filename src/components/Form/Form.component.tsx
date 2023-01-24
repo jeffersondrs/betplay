@@ -42,37 +42,39 @@ export default function Form() {
       });
   };
   return (
-    <form className="w-full flex flex-col justify-evenly items-center">
-      <div className="backG w-96 h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
-        <h1 className="text-6xl text-center text-white font-black uppercase">
-          Bet Aposta
-        </h1>
-      </div>
-      <Input
-        onChange={nameInputChange}
-        type="text"
-        placeholder="Digite seu nome"
-        labelValue="Nome"
-      />
-      <Input
-        onChange={phoneInputChange}
-        type="tel"
-        placeholder="Digite seu telefone"
-        labelValue="Telefone"
-      />
-      <Input
-        onChange={chavePixInputChange}
-        type="text"
-        placeholder="Digite sua chave pix"
-        labelValue="Chave Pix"
-      />
-      <button
-        className="bg-green-900 text-white w-32 h-10 rounded-md p-2 m-1 hover:bg-green-700 ease-in-out duration-300"
-        onClick={handlePost}
-        type="submit"
-      >
-        Post
-      </button>
-    </form>
+    <div className="">
+      <form className="w-full flex flex-col justify-evenly items-center">
+        <div className="backG w-96 h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
+          <h1 className="text-6xl text-center text-white font-black uppercase">
+            Bet Aposta
+          </h1>
+        </div>
+        <Input
+          onChange={nameInputChange}
+          type="text"
+          placeholder="Digite seu nome"
+          labelValue="Nome"
+        />
+        <Input
+          onChange={phoneInputChange}
+          type="tel"
+          placeholder="Digite seu telefone"
+          labelValue="Telefone"
+        />
+        <Input
+          onChange={chavePixInputChange}
+          type="text"
+          placeholder="Digite sua chave pix"
+          labelValue="Chave Pix"
+        />
+        <button
+          className="bg-green-900 border-solid border  text-white w-32 h-10 rounded-md p-2 m-1 hover:bg-green-700 ease-in-out duration-300"
+          onClick={handlePost}
+          type="submit"
+        >
+          Post
+        </button>
+      </form>
+    </div>
   );
 }
