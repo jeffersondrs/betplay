@@ -42,7 +42,6 @@ export default function Form() {
         console.log(error);
       });
   };
-  console.log(object);
   return (
     <form className="w-full flex flex-col justify-evenly items-center">
       <div className="backG w-96 h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
