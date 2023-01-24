@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-
 interface BetUser {
   _id: number;
   name: string;
@@ -7,14 +6,16 @@ interface BetUser {
   chavePix: string;
 }
 
+type BetUsers = BetUser[];
+
 export default function Request() {
-  const [data, setData] = useState<BetUser>();
+  const [data, setData] = useState<BetUsers>();
 
   useEffect(() => {
     fetch("https://betplay.onrender.com/api")
       .then((response) => response.json())
       .then((json) => setData(json.data.betUsers));
-  }, []);
+  }, [data]);
 
   return (
     <div>

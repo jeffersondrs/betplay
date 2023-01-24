@@ -1,11 +1,12 @@
 import Input from "../Input/Input.component";
+import axios from "axios";
 import { useState } from "react";
 
-interface Object {
+type objeto = {
   name: string;
   phone: string;
   chavePix: string;
-}
+};
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -23,14 +24,24 @@ export default function Form() {
     setChavePix(e.target.value);
   };
 
-  const object: Object = {
+  const object: objeto = {
     name: name,
     phone: phone,
     chavePix: chavePix,
   };
 
+  const handlePost = () => {
+    const url = "https://betplay.onrender.com/api";
+    axios
+      .post(url, object)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
   console.log(object);
-
   return (
     <>
       <div>Formulário</div>
@@ -52,6 +63,13 @@ export default function Form() {
         placeholder="Digite sua chave pix"
         labelValue="Chave Pix"
       />
+      <button
+        className="bg-blue-900 text-white w-32 h-10 rounded-md p-2 m-1 hover:bg-blue-700"
+        onClick={handlePost}
+        type="submit"
+      >
+        Post
+      </button>
     </>
   );
 }
