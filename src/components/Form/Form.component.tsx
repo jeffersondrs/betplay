@@ -45,9 +45,11 @@ export default function Form() {
     <div className="">
       <form className="w-full flex flex-col justify-evenly items-center">
         <div className="backG w-96 h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
-          <h1 className="text-6xl text-center text-white font-black uppercase">
-            Bet Aposta
-          </h1>
+          <div className="text-6xl text-center text-white font-black uppercase shadow-sm shadow-black border border-solid border-y-0 border-r-1 p-1 transition-all hover:scale-[101%]">
+            <span className="text-white">Bet</span>
+            <span className="text-green-900">Play</span>
+            <span className="text-white lowercase">.com</span>
+          </div>
         </div>
         <Input
           onChange={nameInputChange}
