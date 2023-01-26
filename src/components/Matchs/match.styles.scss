@@ -1,0 +1,23 @@
+.losango {
+    margin: auto;
+    border: 2px solid #000;
+    cursor: pointer;
+}
+
+.losango:hover {
+    transition: ease-in-out 0.4s all;
+    transform: scaleY(105%);
+    width: 100%;
+}
+
+.timefora:hover {
+    width: 80%;
+    transform: scaleY(105%);
+    transition: ease-in-out 0.4s all;
+}
+
+.timecasa:hover {
+    width: 80%;
+    transform: scaleY(105%);
+    transition: ease-in-out 0.4s all;
+}
