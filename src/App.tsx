@@ -1,79 +1,21 @@
 import "./App.css";
 import Form from "./components/Form/Form.component";
 import Match from "./components/Matchs/Matchs.components";
-import flamengo from "../assets/escudo.png";
-import vasco from "../assets/vasco.png";
-
+import { times, timesfora } from "../public/services/timesApi.js";
 function App() {
+  const nomes = times.map((time) => time.nome);
+  const escudos = times.map((time) => time.escudo);
+  const nomesfora = timesfora.map((time) => time.nome);
+  const escudosfora = timesfora.map((time) => time.escudo);
   return (
     <div className="App">
-      <div className="flex flex-col ">
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
+      <div className="flex flex-col">
+        <Match timecasa={nomes} escudocasa={escudos} timefora={nomesfora} escudofora={escudosfora} />
       </div>
       <div>
         <Form />
       </div>
-      <div>
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-        <Match
-          timecasa="Flamengo"
-          escudocasa={flamengo}
-          timefora="Vasco"
-          escudofora={vasco}
-        />
-      </div>
+      <div className="flex flex-col "></div>
     </div>
   );
 }
