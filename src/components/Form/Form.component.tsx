@@ -71,6 +71,7 @@ export default function Form() {
           type="tel"
           placeholder="Digite seu telefone"
           labelValue="Telefone"
+          maxlength={11}
         />
         <Input
           onChange={chavePixInputChange}
