@@ -1,7 +1,7 @@
 import "./App.css";
 import Form from "./components/Form/Form.component";
 import ChoiceTimes from "./components/ApiRequest/ChoiceTime";
-import { jogos } from "../public/services/timesApi.js";
+import { jogos } from "./api/services/timesApi";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
       <Form />
       <div>
         {jogos.map((jogo: any) => (
-          <ChoiceTimes
+          <ChoiceTimes key={jogo.id}
             timecasa={jogo.timecasa}
             timevisitante={jogo.timevisitante}
             empate={"Empate"}

@@ -33,17 +33,26 @@ export default function Form() {
 
   const handlePost = () => {
     const url = "https://betplay.onrender.com/api";
+    if (!object.name || !object.phone || !object.chavePix)
+      return alert("Preencha todos os campos");
+
     Axios.post(url, object)
       .then((response) => {
         console.log(response);
       })
       .catch((error) => {
-        console.log(error);
+        console.log(error.menssage);
       });
+    if (object.name && object.phone && object.chavePix) {
+      setTimeout(() => {
+        document.location.reload();
+      }, 1500);
+    }
   };
+
   return (
     <div className="bg-white/25 m-2">
-      <form className="w-full flex flex-col justify-evenly items-center">
+      <div className="w-full flex flex-col justify-evenly items-center">
         <div className=" h-16 flex flex-col justify-center items-center m-2 rounded-tl-2xl rounded-br-2xl">
           <div className="text-3xl text-center text-white font-black uppercase shadow-sm shadow-black border border-solid border-y-0 border-r-1 p-1 transition-all hover:scale-[101%]">
             <span className="text-white">Bet</span>
@@ -76,7 +85,7 @@ export default function Form() {
         >
           Post
         </button>
-      </form>
+      </div>
     </div>
   );
 }
