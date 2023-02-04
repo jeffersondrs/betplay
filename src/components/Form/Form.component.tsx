@@ -31,23 +31,17 @@ export default function Form() {
     chavePix: chavePix,
   };
 
-  const handlePost = () => {
+  const handlePost = async () => {
     const url = "https://betplay.onrender.com/api";
     if (!object.name || !object.phone || !object.chavePix)
       return alert("Preencha todos os campos");
-
-    Axios.post(url, object)
+    await Axios.post(url, object)
       .then((response) => {
-        console.log(response);
+        document.location.reload();
       })
       .catch((error) => {
         console.log(error.menssage);
       });
-    if (object.name && object.phone && object.chavePix) {
-      setTimeout(() => {
-        document.location.reload();
-      }, 1500);
-    }
   };
 
   return (
