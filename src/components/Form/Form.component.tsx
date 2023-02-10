@@ -31,23 +31,22 @@ export default function Form() {
     chavePix: chavePix,
   };
 
+<<<<<<< HEAD
   const handlePost = () => {
     const url = "https://betplay-back-end.vercel.app/api";
+=======
+  const handlePost = async () => {
+    const url = "https://betplay.onrender.com/api";
+>>>>>>> fb546bdb145670fb13bc5524f4bc1bb4ff42ee0a
     if (!object.name || !object.phone || !object.chavePix)
       return alert("Preencha todos os campos");
-
-    Axios.post(url, object)
+    await Axios.post(url, object)
       .then((response) => {
-        console.log(response);
+        document.location.reload();
       })
       .catch((error) => {
         console.log(error.menssage);
       });
-    if (object.name && object.phone && object.chavePix) {
-      setTimeout(() => {
-        document.location.reload();
-      }, 1500);
-    }
   };
 
   return (
