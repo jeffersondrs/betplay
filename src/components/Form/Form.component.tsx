@@ -32,7 +32,7 @@ export default function Form() {
   };
 
   const handlePost = () => {
-    const url = "https://betplay.onrender.com/api";
+    const url = "https://betplay-back-end.vercel.app/api";
     if (!object.name || !object.phone || !object.chavePix)
       return alert("Preencha todos os campos");
 
