@@ -31,13 +31,8 @@ export default function Form() {
     chavePix: chavePix,
   };
 
-<<<<<<< HEAD
-  const handlePost = () => {
-    const url = "https://betplay-back-end.vercel.app/api";
-=======
   const handlePost = async () => {
-    const url = "https://betplay.onrender.com/api";
->>>>>>> fb546bdb145670fb13bc5524f4bc1bb4ff42ee0a
+    const url = "https://betplay-back-end.vercel.app/api";
     if (!object.name || !object.phone || !object.chavePix)
       return alert("Preencha todos os campos");
     await Axios.post(url, object)
