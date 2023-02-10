@@ -8,13 +8,7 @@ function App() {
     <div className="App">
       <Form />
       <div>
-        {jogos.map((jogo: any) => (
-          <ChoiceTimes key={jogo.id}
-            timecasa={jogo.timecasa}
-            timevisitante={jogo.timevisitante}
-            empate={"Empate"}
-          />
-        ))}
+        Is Comming Soon!
       </div>
     </div>
   );
