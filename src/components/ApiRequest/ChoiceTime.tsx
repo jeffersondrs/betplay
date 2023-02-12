@@ -42,8 +42,6 @@ export default function ChoiceTimes(props: ChoiceTimesProps) {
     }
   }, [choice]);
 
-  console.log(aposta);
-
   return (
     <>
       <div
@@ -53,7 +51,7 @@ export default function ChoiceTimes(props: ChoiceTimesProps) {
         <div ref={casa} onClick={handleChoice} className={`button mx-1`}>
           {props.timecasa}
         </div>
-        <div ref={empate} onClick={handleChoice} className={`button mx-1 w-10`}>
+        <div ref={empate} onClick={handleChoice} className={`button mx-1`}>
           {props.empate}
         </div>
         <div ref={visitante} onClick={handleChoice} className={`button mx-1`}>

@@ -45,7 +45,7 @@ export const jogos = [
     id: 7,
     timecasa: "Bahia",
     empate: "Empate",
-    timevisitante: "Vasco da Gama",
+    timevisitante: "Barcelona",
   },
   {
     id: 8,
