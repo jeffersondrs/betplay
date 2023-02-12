@@ -7,8 +7,17 @@ function App() {
   return (
     <div className="App">
       <Form />
-      <div>
-        Is Comming Soon!
+      <div className="flex flex-col">
+        {jogos.map((jogo) => {
+          return (
+            <ChoiceTimes
+              id={jogo.id}
+              timecasa={jogo.timecasa}
+              timevisitante={jogo.timevisitante}
+              empate={jogo.empate}
+            />
+          );
+        })}
       </div>
     </div>
   );

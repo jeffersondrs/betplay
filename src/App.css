@@ -5,9 +5,10 @@
 .App {
   text-align: center;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 body {
@@ -17,4 +18,23 @@ body {
     rgb(7, 105, 37) 0%,
     rgb(86, 228, 4) 100%
   );
+}
+
+.ball-logo {
+  animation: App-logo-spin infinite 8s linear;
+  transition: 0.3s ease-in-out;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.ball-logo:hover {
+  animation: App-logo-spin infinite 2s linear;
+  color: rgb(255, 235, 52);
 }

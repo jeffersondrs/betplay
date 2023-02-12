@@ -1,13 +1,14 @@
 import Input from "../Input/Input.component";
 import Axios from "axios";
 import { useState } from "react";
-import "../../App.css";
+import {IoIosFootball} from 'react-icons/io'
 
 type objeto = {
   name: string;
   phone: string;
   chavePix: string;
 };
+
 
 export default function Form() {
   const [name, setName] = useState("");
@@ -51,7 +52,9 @@ export default function Form() {
           <div className="text-3xl text-center text-white font-black uppercase shadow-sm shadow-black border border-solid border-y-0 border-r-1 p-1 transition-all hover:scale-[101%]">
             <span className="text-white">Bet</span>
             <span className="text-green-900">Play</span>
-            <span className="text-white lowercase">.com</span>
+            <span className="text-white lowercase">.c
+            <IoIosFootball className="inline-block h-8 text-black rounded-full ball-logo" />
+            m</span>
           </div>
         </div>
         <Input
