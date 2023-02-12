@@ -47,13 +47,13 @@ export default function ChoiceTimes(props: ChoiceTimesProps) {
   return (
     <>
       <div
-        className="group flex flex-row w-96 justify-evenly items-center my-2 parent"
+        className="group flex flex-row w-96 justify-center items-center my-2 parent"
         key={props.id}
       >
         <div ref={casa} onClick={handleChoice} className={`button mx-1`}>
           {props.timecasa}
         </div>
-        <div ref={empate} onClick={handleChoice} className={`button mx-1`}>
+        <div ref={empate} onClick={handleChoice} className={`button mx-1 w-10`}>
           {props.empate}
         </div>
         <div ref={visitante} onClick={handleChoice} className={`button mx-1`}>
