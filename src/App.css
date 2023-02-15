@@ -38,3 +38,10 @@ body {
   animation: App-logo-spin infinite 2s linear;
   color: rgb(255, 235, 52);
 }
+
+.checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
